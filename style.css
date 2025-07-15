@@ -1,0 +1,77 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: #f7f9fb;
+  color: #222;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: #222;
+  color: #fff;
+}
+.logo {
+  height: 50px;
+}
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 1.5rem;
+}
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+.hero, .about, .contact {
+  padding: 4rem 2rem;
+  text-align: center;
+}
+.highlight {
+  color: #2ecc71;
+}
+.btn {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.75rem 1.5rem;
+  background: #2ecc71;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 10px;
+  transition: transform 0.2s;
+}
+.btn:hover {
+  transform: scale(1.05);
+}
+form input, form textarea {
+  display: block;
+  width: 100%;
+  max-width: 500px;
+  margin: 1rem auto;
+  padding: 1rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+button.btn {
+  border: none;
+  cursor: pointer;
+}
+footer {
+  background: #eee;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+}
+.hero h1, .about h2, .contact h2 {
+  animation: fadeIn 1.2s ease-in-out;
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@media (max-width: 600px) {
+  nav ul { flex-direction: column; gap: 0.5rem; }
+}

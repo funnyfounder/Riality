@@ -1,0 +1,1 @@
+console.log("Welcome to Riality – Trash Cash to Cash Cash!");
