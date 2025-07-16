@@ -1,1 +1,1 @@
-console.log("Welcome to Riality – Trash Cash to Cash Cash!");
+console.log('RIALITY script active');
