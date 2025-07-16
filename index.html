@@ -1,19 +1,18 @@
-<!-- ✅ index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="RIALITY – The ultimate trash cash business turning worthless paper into profit.">
-  <meta name="keywords" content="Riality, Trash Cash, Profit, Hyperinflation, Satire, Currency Recycling">
-  <meta name="author" content="Suraj Kumar Gupta">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="RIALITY – The ultimate trash cash business turning worthless paper into profit." />
+  <meta name="keywords" content="Riality, Trash Cash, Profit, Hyperinflation, Satire, Currency Recycling" />
+  <meta name="author" content="Suraj Kumar Gupta" />
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
   <title>RIALITY – Trash Cash Business</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header>
-    <img src="logo.png" alt="Riality Logo" class="logo">
+    <img src="logo.png" alt="Riality Logo" class="logo" />
     <nav>
       <ul>
         <li><a href="index.html">Home</a></li>
@@ -22,6 +21,7 @@
         <li><a href="blog.html">Blog</a></li>
       </ul>
     </nav>
+    <button onclick="toggleDarkMode()" class="dark-toggle">🌓</button>
   </header>
 
   <main>
@@ -32,32 +32,44 @@
     </section>
 
     <section class="theory">
-      <h2>💡 Trash Cash Theory</h2>
-      <p>It started as a joke: "What if 1 USD = 9000 worthless notes?" Now it’s <strong>RIALITY</strong>. Our theory explores the economics of converting hyperinflated currencies into something useful — recycled industrial paper. Eco-friendly. Hilarious. Technically profitable.</p>
-    </section>
+  <h2>💡 Trash Cash Theory</h2>
+  <p>What began as a tongue-in-cheek question—“What if 1 USD could get you 9,000 banknotes?”—has now become a bold reality we call <strong>RIALITY</strong>. At the core of the Trash Cash Theory is an audacious yet sustainable idea: transforming hyperinflated, defunct, or obsolete paper currencies into raw material for industrial and creative reuse. By reclaiming these virtually worthless notes and giving them a second life, we’re not just recycling—we’re rewriting their story. It’s ironic. It’s eco-conscious. And against all odds, it’s a profitable enterprise turning economic collapse into environmental opportunity.</p>
+</section>
+
 
     <section class="how-it-works">
       <h2>How It Works</h2>
       <ol>
-        <li>You send us worthless currency</li>
-        <li>We pulp it</li>
-        <li>We sell the paper at $1.20/kg</li>
-        <li>You laugh your way to meme-capitalism</li>
+        <li>📦 You send us hyperinflated bills</li>
+        <li>🌀 We pulp and process them</li>
+        <li>💼 We sell the recycled paper at $1.20/kg</li>
+        <li>😂 You profit from memes turned materials</li>
       </ol>
     </section>
 
     <section class="calculator" id="calculator">
       <h2>💰 Profit Calculator</h2>
-      <input type="number" id="dollarInput" placeholder="Enter $ amount">
+      <input type="number" id="dollarInput" placeholder="Enter $ amount" />
       <button onclick="calculateProfit()" class="btn">Calculate</button>
       <div id="results" class="results"></div>
+    </section>
+
+    <section class="impact">
+      <h2>🌍 Environmental Impact</h2>
+      <p>Each ton of recycled currency saves 17 trees and 26,000 liters of water. Your trash cash supports sustainability and innovation at once. You're not just cleaning out your drawers — you're saving the planet.</p>
+    </section>
+
+    <section class="testimonials">
+      <h2>🗣️ What Our Clients Say</h2>
+      <blockquote>“I turned my Zimbabwe dollars into $93 in recycled pulp. This is genius!” — A Happy User</blockquote>
+      <blockquote>“It’s hilarious and environmentally sound. I’m all in.” — Eco-conscious Comedian</blockquote>
     </section>
 
     <section class="contact" id="contact">
       <h2>📬 Contact Us</h2>
       <form id="contactForm">
-        <input type="text" name="name" placeholder="Your Name" required>
-        <input type="email" name="email" placeholder="Your Email" required>
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" name="email" placeholder="Your Email" required />
         <textarea name="message" placeholder="Your Message" required></textarea>
         <button type="submit" class="btn">Send</button>
       </form>
@@ -66,8 +78,7 @@
   </main>
 
   <footer>
-    <button onclick="toggleDarkMode()" class="btn">🌓 Toggle Dark Mode</button>
-    <p>© 2025 RIALITY | Built by Suraj Kumar Gupta & friends 🚀</p>
+    <p>© 2025 RIALITY | Built by Suraj Kumar Gupta 🚀</p>
   </footer>
 
   <script src="script.js"></script>
