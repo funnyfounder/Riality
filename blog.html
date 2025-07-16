@@ -1,1 +1,45 @@
-<!DOCTYPE html><html><head><title>Blog</title><link rel='stylesheet' href='style.css'></head><body><h1>Blog Page placeholder</h1></body></html>
+<!-- ✅ blog.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Blog – RIALITY</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <img src="logo.png" class="logo" alt="Riality Logo">
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="team.html">Team</a></li>
+        <li><a href="faq.html">FAQs</a></li>
+        <li><a href="blog.html">Blog</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="blog">
+      <h2>📝 Latest Trash Cash Thoughts</h2>
+      <div id="blog-posts"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 RIALITY</p>
+  </footer>
+
+  <script>
+    const posts = [
+      { title: "We Made 9kg From $1", slug: "post1", summary: "The day our CEO held 9000 notes and realized it was more profitable as paper." },
+      { title: "The Future Is Pulp", slug: "post2", summary: "Blockchain. AI. Toilet paper. All possible futures of trash cash." }
+    ];
+
+    const blogContainer = document.getElementById('blog-posts');
+    posts.forEach(post => {
+      blogContainer.innerHTML += `<article><h3><a href="post-template.html?title=${post.title}">${post.title}</a></h3><p>${post.summary}</p></article>`;
+    });
+  </script>
+</body>
+</html>
