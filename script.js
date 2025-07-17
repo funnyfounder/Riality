@@ -39,10 +39,11 @@ function calculateProfit() {
 }
 
 // 🌓 Dark Mode Toggle
-function toggleDarkMode() {
-  document.body.classList.toggle("dark-mode");
-  localStorage.setItem("dark", document.body.classList.contains("dark-mode"));
-}
+const toggle = document.getElementById('darkToggle');
+toggle.addEventListener('click', () => {
+document.body.classList.toggle('dark');
+});
+
 
 // 📬 Contact Form (Formspree placeholder)
 function submitForm(e) {
