@@ -1,66 +1,232 @@
-<!-- ✅ style.css -->body { font-family: 'Segoe UI', sans-serif; background-color: #fff8f2; color: #1c1c1c; margin: 0; padding: 0; transition: background 0.4s, color 0.4s; } body.dark-mode { background-color: #121212; color: #eee; }
-
-header { background: #111; color: #fff; padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); }
-
-nav ul { list-style: none; display: flex; gap: 1.5rem; padding: 0; margin: 0; flex-wrap: wrap; }
-
-nav a { color: #fff; text-decoration: none; font-weight: bold; transition: color 0.3s; }
-
-nav a:hover { color: #ff9800; }
-
-.logo { height: 50px; }
-
-main { padding: 2rem; }
-
-.hero { background: linear-gradient(135deg, #ff5722, #ff9800); color: white; text-align: center; padding: 4rem 2rem; border-radius: 0 0 40px 40px; }
-
-section { margin-bottom: 3rem; animation: fadeIn 0.8s ease-in-out; }
-
-.btn { padding: 0.75rem 1.5rem; background: #ff5722; color: white; border: none; border-radius: 8px; font-weight: bold; cursor: pointer; transition: background 0.3s ease; }
-
-.btn:hover { background: #e64a19; }
-
-input, textarea { width: 100%; max-width: 500px; padding: 0.75rem; margin-bottom: 1rem; border: 1px solid #ccc; border-radius: 6px; font-size: 1rem; }
-
-.results { background: #fce4ec; padding: 1rem; border-radius: 6px; margin-top: 1rem; border-left: 5px solid #ff4081; }
-
-.team-grid { display: flex; flex-wrap: wrap; gap: 2rem; justify-content: center; text-align: center; }
-
-.team-grid .member { background: #fff3e0; padding: 1.5rem; border-radius: 12px; width: 250px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); }
-
-.qa h4 { margin-bottom: 0.5rem; color: #ff5722; }
-
-.qa p { margin-bottom: 1.5rem; }
-
-footer { text-align: center; padding: 2rem 1rem; background: #111; color: #fff; }
-
-@media (max-width: 600px) { nav ul { flex-direction: column; align-items: center; } .btn { width: 100%; } .hero h1 { font-size: 2rem; } }
-
-@keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
-
-.konami-flash { animation: flash 0.2s alternate infinite; }
-
-@keyframes flash { from { background: yellow; } to { background: hotpink; } }
-
-.faq-item { background: #ffe; padding: 15px; margin: 10px 0; border-radius: 10px; transition: transform 0.3s ease; }
-
-.faq-item:hover { transform: scale(1.03); background: #fff9c4; }
-
-.team-member { background: #f0f0f0; margin: 20px; padding: 20px; border-radius: 15px; text-align: center; transition: 0.3s; }
-
-.team-member:hover { background: #e1f5fe; transform: scale(1.05); }
-
-.blog-post { background: #fff3e0; padding: 25px; margin-bottom: 20px; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); transition: transform 0.3s; }
-
-.blog-post:hover { transform: translateY(-5px); }
-
-img { max-width: 100%; border-radius: 10px; }
-
-
-@media (max-width: 768px) { .team-member, .faq-item, section { padding: 15px; margin: 10px; } .dark-mode-toggle { top: 5px; right: 5px; padding: 4px 8px; } }
-
-
-.hero, section {
-padding: 2em 1em;
+/* === Global === */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  transition: background 0.4s, color 0.4s;
 }
+
+:root {
+  --bg: #ffffff;
+  --text: #111111;
+  --accent: #ff5733;
+  --card: #f5f5f5;
+}
+
+.dark {
+  --bg: #121212;
+  --text: #f1f1f1;
+  --accent: #ffa500;
+  --card: #1e1e1e;
+}
+
+/* === Navigation === */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  background: var(--accent);
+  padding: 10px 20px;
+}
+
+.logo {
+  height: 40px;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.nav-links {
+  display: flex;
+  gap: 15px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  flex-wrap: wrap;
+}
+
+.nav-links li a {
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+  color: #ffd700;
+}
+
+.dark-btn {
+  background: black;
+  color: #ffd700;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* === Hero Section === */
+.hero {
+  text-align: center;
+  padding: 3em 1em;
+  background: linear-gradient(45deg, #ffd700, #ff5733);
+  color: white;
+  animation: fadeIn 2s;
+}
+
+/* === General Sections === */
+section {
+  padding: 40px;
+  max-width: 900px;
+  margin: auto;
+  animation: fadeIn 1s ease-in;
+}
+
+/* === Buttons === */
+button {
+  padding: 0.7em 1.2em;
+  background: var(--accent);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background: #e63e00;
+}
+
+/* === Calculator Results === */
+#results {
+  margin-top: 1em;
+  background: var(--card);
+  padding: 1em;
+  border-radius: 8px;
+}
+
+/* === Images === */
+.content-img {
+  width: 100%;
+  max-width: 600px;
+  margin: 1em auto;
+  display: block;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+img {
+  max-width: 100%;
+  border-radius: 10px;
+}
+
+/* === Footer === */
+footer {
+  text-align: center;
+  padding: 2em;
+  background: var(--card);
+  font-size: 0.9em;
+}
+
+/* === Headings === */
+h1, h2, h3 {
+  color: #e63946;
+}
+
+/* === Animations === */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.konami-flash {
+  animation: flash 0.2s alternate infinite;
+}
+
+@keyframes flash {
+  from { background: yellow; }
+  to { background: hotpink; }
+}
+
+/* === FAQ Items === */
+.faq-item {
+  background: #ffe;
+  padding: 15px;
+  margin: 10px 0;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.faq-item:hover {
+  transform: scale(1.03);
+  background: #fff9c4;
+}
+
+/* === Team Section === */
+.team-member {
+  background: #f0f0f0;
+  margin: 20px;
+  padding: 20px;
+  border-radius: 15px;
+  text-align: center;
+  transition: 0.3s;
+}
+
+.team-member:hover {
+  background: #e1f5fe;
+  transform: scale(1.05);
+}
+
+/* === Blog Posts === */
+.blog-post {
+  background: #fff3e0;
+  padding: 25px;
+  margin-bottom: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+
+.blog-post:hover {
+  transform: translateY(-5px);
+}
+
+/* === Responsive Layout === */
+@media (max-width: 768px) {
+  .team-member,
+  .faq-item,
+  section {
+    padding: 15px;
+    margin: 10px;
+  }
+
+  .nav-right {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .nav-links li {
+    width: 100%;
+  }
+
+  .dark-btn {
+    margin-top: 10px;
+  }
+
+  .hero {
+    padding: 2em 1em;
+  }
 }
