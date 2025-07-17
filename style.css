@@ -170,19 +170,10 @@ h1, h2, h3 {
 }
 
 /* === Team Section === */
-.team-member {
-  background: #f0f0f0;
-  margin: 20px;
-  padding: 20px;
-  border-radius: 15px;
-  text-align: center;
-  transition: 0.3s;
-}
+.team-grid { display: flex; flex-wrap: wrap; gap: 2rem; justify-content: center; text-align: center; }
 
-.team-member:hover {
-  background: #e1f5fe;
-  transform: scale(1.05);
-}
+.team-grid .member { background: #fff3e0; padding: 1.5rem; border-radius: 12px; width: 250px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); }
+
 
 /* === Blog Posts === */
 .blog-post {
